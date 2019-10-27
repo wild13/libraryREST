@@ -9,6 +9,5 @@ import com.wcs.library.restlibrary.entity.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer> {
-    List<Book> findByTitleContainingOrAuthorContainingOrDescriptionContaining( String theTitle, String theAuthor,
-            String theDescription );
+    List<Book> findByTitleContainingOrDescriptionContaining( String theTitle, String theDescription );
 }
